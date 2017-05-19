@@ -12,3 +12,5 @@ install_subdir('lutris', install_dir: purelibdir)
 subdir('bin')
 subdir('share')
 subdir('po')
+
+meson.add_install_script('meson_post_install.py')
