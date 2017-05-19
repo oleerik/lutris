@@ -13,4 +13,9 @@ subdir('bin')
 subdir('share')
 subdir('po')
 
+nose = find_program(['nosetests-3', 'nosetests'])
+if nose.found()
+  test('tests', nose, args: [meson.source_root()])
+endif
+
 meson.add_install_script('meson_post_install.py')
